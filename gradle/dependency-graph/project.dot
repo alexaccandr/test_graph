@@ -1,0 +1,21 @@
+digraph {
+  graph [label="My Application\n ",labelloc=t,fontsize=30,ranksep=1.4];
+  node [style=filled, fillcolor="#bbbbbb"];
+  rankdir=TB;
+
+  # Projects
+
+  ":app" [fillcolor="#baffc9"];
+  ":module1" [fillcolor="#baffc9"];
+  ":module2" [fillcolor="#baffc9"];
+
+  {rank = same;}
+
+  # Dependencies
+
+  ":app" -> ":app"
+  ":app" -> ":module1" [style=dotted]
+  ":module1" -> ":module1"
+  ":module1" -> ":module2" [style=dotted]git po
+  ":module2" -> ":module2"
+}
