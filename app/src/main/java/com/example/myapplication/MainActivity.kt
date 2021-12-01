@@ -9,9 +9,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val model2 = Module1Utils.createModle2()
-        val b = model2.myVar1
-
-        val sas: Pair<Int, Int> = 2 to 2
+//        val model2 = Module1Utils.createModle2()
+//        val b = model2.myVar1
+//
+//        val sas: Pair<Int, Int> = 2 to 2
     }
 }
