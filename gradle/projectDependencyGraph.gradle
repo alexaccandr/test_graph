@@ -1,4 +1,4 @@
-import kotlin.Pair
+//import kotlin.Pair
 
 // From https://github.com/JakeWharton/SdkSearch/blob/master/gradle/projectDependencyGraph.gradle
 // The only difference here is the output directory.
@@ -26,7 +26,7 @@ task projectDependencyGraph {
     }
 
     def projects = new LinkedHashSet<Project>()
-    def dependencies = new LinkedHashMap<Pair<Project, Project>, List<String>>()
+    def dependencies = new LinkedHashMap<Tuple2<Project, Project>, List<String>>()
     def multiplatformProjects = []
     def jsProjects = []
     def androidProjects = []
@@ -59,7 +59,7 @@ task projectDependencyGraph {
               projects.add(dependency)
               rootProjects.remove(dependency)
 
-              def graphKey = new Pair<Project, Project>(project, dependency)
+              def graphKey = new Tuple2<Project, Project>(project, dependency)
               def traits = dependencies.computeIfAbsent(graphKey) { new ArrayList<String>() }
 
               if (config.name.toLowerCase().endsWith('implementation')) {

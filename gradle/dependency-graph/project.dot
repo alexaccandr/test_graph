@@ -16,6 +16,6 @@ digraph {
   ":app" -> ":app"
   ":app" -> ":module1" [style=dotted]
   ":module1" -> ":module1"
-  ":module1" -> ":module2" [style=dotted]git po
+  ":module1" -> ":module2" [style=dotted]
   ":module2" -> ":module2"
 }
