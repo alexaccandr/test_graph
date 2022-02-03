@@ -20,6 +20,7 @@ digraph {
   ":app" -> ":module3" [style=dotted]
   ":module1" -> ":module1"
   ":module1" -> ":module2" [style=dotted]
+  ":module1" -> ":module3" [style=dotted]
   ":module2" -> ":module2"
   ":module3" -> ":module3"
 }
